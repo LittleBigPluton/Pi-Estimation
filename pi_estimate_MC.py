@@ -29,6 +29,14 @@ def Leibniz_Formula(attempts):
         else:
             estimation -= divider
     return 4*estimation
+
+def Nilakantha_Series(attempts):
+    estimation = 3
+    for i in range(attempts):
+        n = (i+1)*2
+        estimation += 4*(-1)**i/n/(n+1)/(n+2)
+    return (estimation)
 # Run estimator 1,000,000 times to get more precise result
 print(MC_PI_calculator(1000000))
 print(Leibniz_Formula(1000000))
+print(Nilakantha_Series(1000))

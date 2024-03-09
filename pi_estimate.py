@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 ###############################
 #####   Import libraries  #####
 ###############################
@@ -22,7 +21,7 @@ def MC_PI_calculator (attempts):
     # Check if the point is in the circle area or not
         if point<=1:
             inside_circle += 1
-    # Calculate ratio of data point inside 
+    # Calculate ratio of data point inside
     return(inside_circle/attempts*4)
 
 def Leibniz_Formula(attempts):
@@ -58,11 +57,3 @@ def Gauss_Legendre(attempts):
         a = a_n1
     #Return estimation
     return ((a+b)**2)/4/t
-# Run MC estimator 1,000,000 times to get more precise result
-print(MC_PI_calculator(1000000))
-# Run Leibniz Formula 100 times
-print(Leibniz_Formula(100))
-# Run Nilakantha Series 100 times
-print(Nilakantha_Series(100))
-# Run Gauss Legendre algorithm 10 times
-print(Gauss_Legendre(10))

@@ -11,13 +11,18 @@ import random
 ###############################
 
 def MC_PI_calculator (attempts):
+    # Create counter how many data point inside quarter circle
     inside_circle = 0
+    # Generate data points
     for i in range(0,attempts):
         x = random.uniform(0.0,1.0)
         y = random.uniform(0.0,1.0)
+    # Calculate point's coordinate
         point = x*x+y*y
+    # Check if the point is in the circle area or not
         if point<=1:
             inside_circle += 1
+    # Calculate ratio of data point inside 
     return(inside_circle/attempts*4)
 
 def Leibniz_Formula(attempts):
@@ -53,8 +58,11 @@ def Gauss_Legendre(attempts):
         a = a_n1
     #Return estimation
     return ((a+b)**2)/4/t
-# Run estimator 1,000,000 times to get more precise result
+# Run MC estimator 1,000,000 times to get more precise result
 print(MC_PI_calculator(1000000))
+# Run Leibniz Formula 100 times
 print(Leibniz_Formula(100))
+# Run Nilakantha Series 100 times
 print(Nilakantha_Series(100))
+# Run Gauss Legendre algorithm 10 times
 print(Gauss_Legendre(10))

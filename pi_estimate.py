@@ -16,7 +16,7 @@ def MC_PI_calculator (attempts):
     for i in range(0,attempts):
         x = 1-random.uniform(0.0,2.0)
         y = 1-random.uniform(0.0,2.0)
-    # Calculate point's coordinate
+    # Calculate point's distance from center of circle
         point = math.sqrt(x*x+y*y)
     # Check if the point is in the circle area or not
         if point<=1:

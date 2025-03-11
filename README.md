@@ -6,6 +6,7 @@ This project implements several numerical methods to estimate the value of $\pi$
 - [Installation](#Installation)
 - [Methods](#Methods)
 - [Contributing](#Contributing)
+- [References](#References)
 
 ## Required Libraries
 Two libraries used in this python script, math and random. Both of them are part of Python’s standard library. This means they're built-in and available for you to use right away without any additional installation.
@@ -26,7 +27,7 @@ python3 main.py
 ```
 
 ## Methods
-### Monte Carlo[$^1$](https://en.wikipedia.org/wiki/Monte_Carlo_method)
+### Monte Carlo[(1)](https://en.wikipedia.org/wiki/Monte_Carlo_method)
 #### Theory
 
 The Monte Carlo method uses random sampling to estimate quantities that are difficult to calculate directly. We use a geometric probability approach based on the areas of a circle and a square. We generate N random points uniformly distributed over the square. Since the points are uniformly distributed, the probability that a point falls within any subregion is proportional to the area of that subregion relative to the total area of the square. Consider a circle of radius 1 inscribed in a square of side length 2.   
@@ -45,7 +46,7 @@ $$\pi \approx 4 \times \frac{N_{\text{inside}}}{N}$$
 So by counting the fraction of points inside the circle and multiplying by 4, we can estimate the value of $\pi$.
 
 
-The accuracy of the Monte Carlo estimation improves with the number of samples N. As N increases, the ratio $\frac{N_{\text{inside}}}{N}$ converges to the true probability $\frac{\pi}{4}$ by the law of large numbers[$^2$](https://en.wikipedia.org/wiki/Law_of_large_numbers), leading to an increasingly accurate approximation of $\pi$.
+The accuracy of the Monte Carlo estimation improves with the number of samples N. As N increases, the ratio $\frac{N_{\text{inside}}}{N}$ converges to the true probability $\frac{\pi}{4}$ by the law of large numbers[(2)](https://en.wikipedia.org/wiki/Law_of_large_numbers), leading to an increasingly accurate approximation of $\pi$.
 
 This approach shows how the fraction of points that fall within a specific region (the circle) is directly related to the area of that region relative to the total area of the space (the square).
 
@@ -84,7 +85,7 @@ The following table shows how estimated $\pi$ values change for different attemp
 | $10^5$            | 3.14112                 |
 | $10^6$            | 3.14142                 |
 
-### Leibniz Formula[$^3$](https://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80)
+### Leibniz Formula[(3)](https://en.wikipedia.org/wiki/Leibniz_formula_for_%CF%80)
 #### Theory
 
 The Leibniz formula (also known as the Gregory-Leibniz series) for $\pi$ is an infinite series that converges to . It is derived from the Taylor series expansion of the arctan function:
@@ -131,7 +132,7 @@ Every for loop, the denominator is recalculated with respect to the current iter
 
 
 
-### Nilakantha Series[$^4$](https://en.wikipedia.org/wiki/Pi#Rate_of_convergence)
+### Nilakantha Series[(4)](https://en.wikipedia.org/wiki/Pi#Rate_of_convergence)
 #### Theory
 
 The Nilakantha series is an infinite series that provides an efficient approximation for $\pi$ with faster convergence compared to some other series, such as the Leibniz formula. The series is defined as:
@@ -170,7 +171,7 @@ During the finite iteration, the variable n is calculated according to the curre
 | 100 terms       | 3.14152              |
 | 1000 terms      | 3.14159              |
 
-### Gauss-Legendre[$^5$](https://en.wikipedia.org/wiki/Gauss%E2%80%93Legendre_algorithm)
+### Gauss-Legendre[(5)](https://en.wikipedia.org/wiki/Gauss%E2%80%93Legendre_algorithm)
 
 #### Theory
 

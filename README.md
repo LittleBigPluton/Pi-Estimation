@@ -57,14 +57,14 @@ For MC_PI_calculator function in pi_estimate.py file, two positive random number
 ```python
 # Generate data points
 for i in range(0,attempts):
-  x = random.uniform(0.0,1.0)
-  y = random.uniform(0.0,1.0)
+  x = 1-random.uniform(0.0,2.0)
+  y = 1-random.uniform(0.0,2.0)
 ```
 
 Then, it is checked the distance of this point from origin of the circle to see if it is inside the circle or not.
 ```python
-# Calculate point's coordinate
-point = x*x+y*y
+# Calculate point's distance from center of circle
+point = math.sqrt(x*x+y*y)
 # Check if the point is in the circle area or not
 if point<=1:
   inside_circle += 1
